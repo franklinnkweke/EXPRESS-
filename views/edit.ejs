@@ -1,0 +1,50 @@
+<%-include('partials/head')%>
+      <!-- menue row -->
+      <div class="row">
+        <div id="menu">
+          <nav>
+            <div class="wrap-nav">
+               <ul>
+                <li class="active"><a href="/movies">Home</a></li>
+                
+               </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<!--////////////////////////////////////Container-->
+<section id="container">
+	<div class="wrap-container zerogrid">
+        <div class="widget wid-new-updates container">
+            <h3 class="wid-header">Edit Movie</h3>
+            <form method="post" action="/movies/<%=singleRecord.id%>?_method=PATCH" >
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Title</label>
+                    <input name="title" type="text" class="form-control" id="formGroupExampleInput"  value="<%=singleRecord.title%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2" >Description</label>
+                    <input name="description" type="text" class="form-control" id="formGroupExampleInput2" value="<%=singleRecord.description%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">ImageUrl</label>
+                    <input name="image" type="text" class="form-control" id="formGroupExampleInput2" value="<%=singleRecord.image%>">
+                  </div>
+                  <div class="form-group">
+                    <label for="formGroupExampleInput2">Price</label>
+                    <input name="price" type="text" class="form-control" id="formGroupExampleInput2" value="<%=singleRecord.price%>">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Update Movie</button>
+            </form>
+            
+         </div>
+
+	</div>
+</section>
+
+<!--////////////////////////////////////Footer-->
+<%-include('partials/footer')%>
